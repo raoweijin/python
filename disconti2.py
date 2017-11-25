@@ -3,6 +3,9 @@ data=[7,8,9,1,2,3,4,-100,-99,6,7]
 data=[9]
 data=[]
 length = len(data)
+
+
+
 num=[0 for i in range(0,length)]
 res = [0 for i in range(0,length)]
 sample=[[-1 for i in range(0,length)] for j in range(0,length)]
