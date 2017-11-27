@@ -1,5 +1,5 @@
 
-data=[[1,2],[3,4],[1090,1]]
+data=[[1,2],[3,4],[0,1]]
 
 row= len(data)
 collum= len(data[0])
