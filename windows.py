@@ -1,11 +1,12 @@
-a=[1,2,3,4,5]
+#a=[1,2,3,4,5]
+a=[]
 size=3
 class listNode:
     def __init__(self,value=None,next=None):
         #self.key=key
         self.value=value
         self.next=None
-
+#Create a list Start
 head = listNode()
 work = head
 for i in a:
@@ -16,7 +17,7 @@ point = head
 while(point != None):
     print(point.value)
     point = point.next
-        
+#Create a list End        
 
 winstart=head.next
 num = 0
@@ -40,5 +41,6 @@ while(winEnd != None):
     temp = 0
     winstart = winstart.next
     winEnd = winEnd.next
+print ("the original data is ",a)
 print (winSum)
     
