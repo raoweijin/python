@@ -1,0 +1,46 @@
+class quicksort:
+    def run(self,data):
+        length = len(data)
+        if (length <=1):
+            return data
+        pilot =0
+        guard = data[pilot]
+        i = 1
+        j = length - 1
+        
+        while(j != pilot and  i !=pilot):
+            if (j> pilot and data[j] > guard):
+                j-=1  
+            if (j != pilot):
+                data[pilot] = data[j]
+                pilot = j
+            #else:
+            #    break            
+            if( i< pilot and data[i] < guard):
+                i+=1            
+            if (i != pilot):
+                data[pilot] = data[i]
+                pilot = i
+            #else:
+            #    break
+     
+        data[pilot] = guard
+        print(data)
+        d1 = []
+        d2 = []
+        if(pilot > 0):
+            d1 = self.run(data[0:(pilot)])
+    
+        if (length) > (pilot+1):
+            d2 = self.run(data[(pilot+1):(length)])
+        return d1+[guard]+d2
+        
+             
+data= [2, 4, 3, 9, 6, 10, 1,5]   
+#data= [4, 3] 
+#data= [3]  
+print("data is ",data)    
+mysolution = quicksort()
+result = mysolution.run(data)
+
+print("result is ",result)
